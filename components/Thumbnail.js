@@ -17,7 +17,7 @@ const Thumbnail = forwardRef(({ result }, ref) => {
         <div className="overflow-hidden rounded-t-lg">
           <Image
             className="transition duration-300 ease-in-out transform hover:scale-110 hover:rotate-3"
-            alt={result.title}
+            alt={result.title || result.original_name}
             src={
               `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
               `${BASE_URL}${result.poster_path}`
